@@ -1,4 +1,3 @@
-
 function criarBarra(var_nome, var_avatar) {
 
   // Estilos CSS embutidos diretamente no JavaScript
@@ -37,12 +36,12 @@ const css = `
   audio::-webkit-media-controls-time-remaining-display, audio::-internal-media-controls-download-button, video::-internal-media-controls-download-button { display: none; }
   .hide { display: none !important; }
   
-  .user-bar { display: flex; width: 100%; height: 70px; align-items: center; background: #005e54; color: #000; font-size: 24px; position: absolute; z-index: 99999; top: 0; }
+  .user-bar { display: flex; width: 100%; height: 70px; align-items: center; background: #ffffff; color: #000000; font-size: 24px; position: absolute; z-index: 99999; top: 0; }
   .user-bar:after { content: ""; display: table; clear: both; }
   .user-bar .avatar { margin: 0 0 0 5px; width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
   .user-bar .avatar img { border-radius: 50%;  width: 44px; height: 44px; min-width: 44px; min-height: 44px; object-fit: cover; }
   .user-bar div {float: left; position: relative; }
-  .user-bar .name-status-div {display: flex; width: 100%; margin-left: 10px; */ flex-direction: column; */}
+  .user-bar .name-status-div {display: flex; width: 100%; margin-left: 5px; flex-direction: column;}
   .user-bar .name { float: left; font-size: 17px; font-weight: 600; overflow: hidden; white-space: nowrap; }
   .user-bar .status { float: left; font-size: 13px; font-weight: 400; }
   .user-bar .actions {float: right !important; margin-right: 15px;}
@@ -166,7 +165,7 @@ setInterval(() => {
   } else if (isTyping) {
     status.innerText = 'digitando...';
   } else {
-    status.innerText = 'Atendimento';
+    status.innerText = 'online';
   }
 
   // Atualiza o status das mensagens
