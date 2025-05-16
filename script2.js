@@ -90,3 +90,19 @@ function criarBarra(var_nome, var_avatar) {
       audioNot.play();        
     }
   }
+  
+  }, 400)
+  
+  var cssId = 'myCss';  // you could encode the css path itself to generate id..
+  if (!document.getElementById(cssId))
+    {
+        var head  = document.getElementsByTagName("typebot-standard")[0].shadowRoot.querySelector('.typebot-container');
+        var link  = document.createElement('link');
+        link.id   = cssId;
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/gh/igorlemoes/template_typebot_whatsapp@0.0.2/style.css';
+        link.media = 'all';
+        head.appendChild(link);
+    }
+  }
